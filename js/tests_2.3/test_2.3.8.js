@@ -46,11 +46,11 @@ const B = Object.create(A, {
 	},
 });
 
-A.getObjectName(); // This is Object A!
-B.getObjectName(); // This is Object B!
+console.log(A.getObjectName()); // This is Object A!
+console.log(B.getObjectName()); // This is Object B!
 
-A.hasOwnProperty('getObjectName'); // true
-A.hasOwnProperty('objectName'); // true
+console.log(A.hasOwnProperty('getObjectName')); // true
+console.log(A.hasOwnProperty('objectName')); // true
 
-B.hasOwnProperty('getObjectName'); // false
-B.hasOwnProperty('objectName'); // true
+console.log(B.hasOwnProperty('getObjectName')); // false
+console.log(B.hasOwnProperty('objectName')); // true
