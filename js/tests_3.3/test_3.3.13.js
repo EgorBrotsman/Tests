@@ -16,14 +16,19 @@
 
 
 const throttle = (fn, throttleTime) => {
-	let isProcessing = false;
-	return function () {
-		if (!isProcessing) {
-			isProcessing = true;
-			fn.apply(this, arguments);
-			setTimeout(() => (isProcessing = false), throttleTime);
+	let isThrottle = false;
+	function wrapper () {
+		if (isThrottle) {
+			return
 		}
+		fn.apply(this, arguments);
+		isThrottle = true
+		setTimeout(() => {
+			isThrottle = false
+		}, throttleTime)
 	};
+
+	return wrapper
 };
 
 
