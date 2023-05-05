@@ -42,7 +42,6 @@ function applyFn(dataArr, callback) {
 	return obj
 }
 
-
 // const { succeeded, errors } = applyFn([1, 2, 3], (arg) => arg + 1);
   //succeeded: [2, 3, 4],
   //errors: [],
